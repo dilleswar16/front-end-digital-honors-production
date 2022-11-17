@@ -46,7 +46,7 @@ const ForgotPassword = () => {
   const handleGetUserId = (e) => {
     e.preventDefault();
     console.log(emailId);
-    axios.post('/forgot/userid',{emailId})
+    axios.post(`${API_BACKEND_URL}/forgot/userid`,{emailId})
     .then((response)=>{
       console.log(response)
       console.log(response.data)
@@ -66,7 +66,7 @@ const ForgotPassword = () => {
   const handleGetPassword = (e) => {
     e.preventDefault();
     console.log(userId)
-    axios.post('/forgot/password',{userId})
+    axios.post(`${API_BACKEND_URL}forgot/password`,{userId})
     .then((response)=>{
       console.log(response)
       console.log(response.data)

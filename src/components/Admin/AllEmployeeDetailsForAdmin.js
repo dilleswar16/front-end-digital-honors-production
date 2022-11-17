@@ -80,7 +80,7 @@ const AllEmployeeDetailsForAdmin = () => {
   };
 
   const loadDataFromDB = async () => {
-    let allEmployee = await axios.get("/getallemployees");
+    let allEmployee = await axios.get(`${API_BACKEND_URL}/getallemployees`);
     // console.log("inside all emp")
     setAllEmployeeDetils(allEmployee.data);
   }
@@ -153,7 +153,7 @@ const AllEmployeeDetailsForAdmin = () => {
                 className={classes.table}
                 aria-label="customized table"
                 stickyHeader
-                aria-label="sticky table"
+               
               >
                 <TableHead>
                   <TableRow>
@@ -271,7 +271,7 @@ const AllEmployeeDetailsForAdmin = () => {
                             }
                             axios
                               .delete(
-                                `/deleteemployee/${emp.userId}`
+                                `${API_BACKEND_URL}/deleteemployee/${emp.userId}`
                               )
                               .then(() => {
                                 // console.log("Succesfully Deleted");

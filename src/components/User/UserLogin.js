@@ -39,7 +39,7 @@ const UserLogin = () => {
     };
     // console.log(loginDetailsForUser);
     let employee = await axios.post(
-      "/login/admin",
+      "http://localhost:8080/login/admin",
       loginDetailsForUser
     );
     if (employee.data.userId === 0) {
