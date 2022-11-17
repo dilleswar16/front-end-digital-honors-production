@@ -80,7 +80,7 @@ const AllEmployeeDetailsForAdmin = () => {
   };
 
   const loadDataFromDB = async () => {
-    let allEmployee = await axios.get(`${API_BACKEND_URL}/getallemployees`);
+    let allEmployee = await axios.get(`${process.env.API_BACKEND_URL}/getallemployees`);
     // console.log("inside all emp")
     setAllEmployeeDetils(allEmployee.data);
   }
@@ -271,7 +271,7 @@ const AllEmployeeDetailsForAdmin = () => {
                             }
                             axios
                               .delete(
-                                `${API_BACKEND_URL}/deleteemployee/${emp.userId}`
+                                `${process.env.API_BACKEND_URL}/deleteemployee/${emp.userId}`
                               )
                               .then(() => {
                                 // console.log("Succesfully Deleted");

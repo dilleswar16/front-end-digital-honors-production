@@ -17,7 +17,7 @@ const ViewIndividualEmployeeDetails = () => {
       
  }
 
-    axios.get(`${API_BACKEND_URL}/getemployee/${params.employeeId}`)
+    axios.get(`${process.env.API_BACKEND_URL}/getemployee/${params.employeeId}`)
     .then((response)=>{
       setEmployeeData(response.data)
     })
