@@ -49,7 +49,7 @@ const AdminLogin = () => {
       password: password,
     };
     let employee = await axios.post(
-      "/login/admin",
+      `${API_BACKEND_URL}/login/admin`,
       loginDetailsForAdmin
     );
     // console.log(employee.data);

@@ -181,7 +181,7 @@ const AddEmployeeDetails = () => {
     }
 
     axios
-      .post(`/addemployee`, employee)
+      .post(`${API_BACKEND_URL}/addemployee`, employee)
       .then((response) => {
         console.log(response.data);
         alert(`Employee added Successfully.

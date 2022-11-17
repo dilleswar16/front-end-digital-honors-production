@@ -218,7 +218,7 @@ const UpdateEmployeeDetails = (props) => {
     } 
     axios
       .patch(
-        `/updateemployee/${employee.userId}`,
+        `${API_BACKEND_URL}updateemployee/${employee.userId}`,
         employee
       )
       .then((response) => {
