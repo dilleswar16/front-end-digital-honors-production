@@ -140,7 +140,7 @@ const CardItemView = ({employeeDataa,setDeleteUserId}) => {
                       }
                       axios
                         .delete(
-                          `${API_BACKEND_URL}deleteemployee/${employeeData.userId}`
+                          `${process.env.API_BACKEND_URL}deleteemployee/${employeeData.userId}`
                         )
                         .then(() => {
                           

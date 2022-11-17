@@ -14,7 +14,7 @@ const CardView = () => {
   
   
   const loadDataFromDB = async () => {
-    let allEmployee = await axios.get(`${API_BACKEND_URL}/getallemployees`);
+    let allEmployee = await axios.get(`${process.env.API_BACKEND_URL}/getallemployees`);
     setEmployeeData(allEmployee.data);
     
   }
